@@ -144,6 +144,7 @@ hs{i} = my_subplot(8,2,15,[.65 1]);
 hs{i}.Position(2) = hs{i}.Position(2) + .06;
 hs{i}.Position(1) = hs{i}.Position(1) + .01;
 
+snr = snr; % to suppress MATLAB warning
 for k = 1:numel(snr{1})
 	histogram(snr{1}{k}, linspace(-.05,0.6, 100), 'EdgeColor', col(icol(k), :), 'DisplayStyle', 'stairs', 'Linewidth', 1)
 	hold on
