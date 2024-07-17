@@ -23,8 +23,8 @@ A(2,:) = spat;
 A(3,:) = sratio;
 A(4,:) = ori;
 A(5,:) = phase;
-A = gpuArray(single(A));
-X = gpuArray(single(X));
+% A = gpuArray(single(A));
+% X = gpuArray(single(X));
 
 % gabors at each pixel location
 gb = gaborReduced(A,X);

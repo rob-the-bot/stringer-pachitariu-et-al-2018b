@@ -6,7 +6,7 @@ clear all;
 dataroot = '/media/carsen/DATA2/grive/10krecordings/imgResp/';        
 % where processed data and results are saved
 matroot  = '/media/carsen/DATA2/grive/10krecordings/stimResults/';
-useGPU = 1;
+useGPU = 0;
 
 addpath(genpath('.'));
 

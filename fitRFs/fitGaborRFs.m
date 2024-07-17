@@ -19,7 +19,7 @@ for wnorm = 0:1
 	
 	%%
 	for k = 1:length(respAll)
-		gpuDevice(1);
+		% gpuDevice(1);
 		
 		respN    = respAll{k};
 		
