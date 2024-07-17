@@ -44,7 +44,7 @@ Each file is a different session with images given by "stimset" with mouse_name 
 - *db*: database file of information about recording 
 - *stat*: single cell statistics of cell detection algorithm (Suite2p). 
 - *stat.redcell*: (for some recordings) indicated whether the cell had tdtomato and was therefore an interneuron (GAD+).  
-- *stat.redprob*: (for some recordings) contains the classifier’s probability that a cell has tdtomato (from 0 to 1).  
+- *stat.redprob*: (for some recordings) contains the classifier's probability that a cell has tdtomato (from 0 to 1).  
 - *med*: estimated 3D position of cells in tissue.  
 - *stim.resp*: average stimulus response of each neuron (stim presentations x neurons), these are averaged over 2 time bins, and are aligned to the onset of the plane in which each neuron lives. These are in the order in which the stimuli were presented. 
 - *stim.istim*: stimulus identity of each stim.resp (biggest stimulus e.g. 2801 indicates gray screen shown instead of image) 
@@ -72,14 +72,14 @@ import scipy.io as sio
 mt = sio.loadmat('natimg2800_M160825_MP027_2016-12-14.mat')
 
 ### stimulus responses
-resp = mt[‘stim’][0]['resp'][0]    # stimuli by neurons
-istim = mt[‘stim’][0]['istim'][0]   # identities of stimuli in resp
-spont = mt[‘stim’][0]['spont'][0]  # timepoints by neurons
+resp = mt['stim'][0]['resp'][0]    # stimuli by neurons
+istim = mt['stim'][0]['istim'][0]   # identities of stimuli in resp
+spont = mt['stim'][0]['spont'][0]  # timepoints by neurons
 
 ### cell information
-med = mt[‘med’]                 # cell centers (X Y Z)
-mt[‘stat’][0]     # first cell’s stats
-mt[‘stat’][0][‘npix’]       # one example field, tells you how pixels make up the cell
+med = mt['med']                 # cell centers (X Y Z)
+mt['stat'][0]     # first cell's stats
+mt['stat'][0]['npix']       # one example field, tells you how pixels make up the cell
 
 ### loading images
 mt = sio.loadmat('images_natimg2800_all.mat')
