@@ -1,22 +1,24 @@
-# stringer-pachitariu-et-al-2018b
+# High-dimensional geometry of population responses in visual cortex
+
 Code to analyze recordings of 10,000 neurons in response to 2,800 natural images presented twice
 
 This code produces the figures from Stringer, Pachitariu et al, 2018b:
 
-Carsen Stringer, Marius Pachitariu, Nicholas Steinmetz, Matteo Carandini, Kenneth D. Harris. *High-dimensional geometry of population responses in visual cortex.* bioRxiv. ([link](https://www.biorxiv.org/content/early/2018/07/22/374090))
+Carsen Stringer, Marius Pachitariu, Nicholas Steinmetz, Matteo Carandini, Kenneth D. Harris. *High-dimensional geometry of population responses in visual cortex.* bioRxiv. ([link](https://www.nature.com/articles/s41586-019-1346-5))
 
 It relies on data deposited on figshare at:
 
 Carsen Stringer, Marius Pachitariu, Nicholas Steinmetz, Matteo Carandini, Kenneth D. Harris. *Recordings of ten thousand neurons in visual cortex in response to 2,800 natural images.* ([link](https://figshare.com/articles/Recordings_of_ten_thousand_neurons_in_visual_cortex_in_response_to_2_800_natural_images/6845348))
 
-The datasets to produce all the main figures are available. The script 'process_data.m' is the main processing script. Set useGPU=0 if you do not have a GPU. The calls to the figure functions live in 'make_figs.m'.
+The datasets to produce all the main figures are available. The script `process_data.m` is the main processing script.
+Set `useGPU=0` if you do not have a GPU.
+The calls to the figure functions live in `make_figs.m`.
 
-
-# Data description 
+# Data description
 
 If you use the data please cite the original paper and the figshare DOI.
 
-### Stimulus conditions  
+### Stimulus conditions
 
 Each visual stimulus is presented across 3 screens surrounding the mice. Each of the following stimulus sets was presented at least twice in a recording: 
 - natimg2800: 2800 different natural images 
@@ -51,7 +53,7 @@ Each file is a different session with images given by "stimset" with mouse_name 
 - *stim.spont*: spontaneous activity during recording, averaged over 2 time bins, includes gray screen presentations during stimulus blocks 
 - (if orientation recording, *stim.ori* indicates direction of drifting grating) 
 
-### Image files 
+### Image files
 
 All image files contain a matrix imgs which is 68 degrees by 270 degrees by number of images, where degrees represent degrees of the mouse's visual space. 
 - **images_natimg2800_all.mat**: The same natural images were shown to all mice.
